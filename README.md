@@ -1,11 +1,34 @@
 # Allan Lab Website
 
-This is the website of our academic research group at Leiden University.
+## using Jekyll scholar
 
-This website is powered by Jekyll and some Bootstrap, Bootwatch. We tried to make it simple yet adaptable, so that it is easy for you to use it as a template. Plese feel free to copy and modify for your own purposes.  You don't have to link to us or mention us (but of course we appreciate it).
+add line in gemfile
+```
+gem 'jekyll-scholar'
+```
+or install by
+```
+gem install jekyll-scholar
+```
+add these lines in _config.yml
+```
+plugins: ['jekyll/scholar']
+scholar:
+  style: apa
+```
+style specifies the style you want to render
 
-Go to *aboutwebsite.md*  to learn how to copy and modidy this page for your purpose. 
+Now create a directory called _bibliography where you put all your .bib or bibtex files into. Remember to add
+```
+---
+---
+```
+at the top of your bibtex file.
 
+Now in the any file under _pages. You can render the bibtex using
+```
+{% bibliography -f book%}
+```
+where the file_name is the file name of your .bib file without extension
 
-Copyright Allan Lab. Code released under the MIT License.
-
+## How Jekyll work

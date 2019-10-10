@@ -29,7 +29,10 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-
+# bibtex
+plugins: ['jekyll/scholar']
+scholar:
+  style: apa
 
 # Markdown Processing
 kramdown:
