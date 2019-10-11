@@ -27,11 +27,11 @@ at the top of your bibtex file.
 
 Now in the any file under _pages. You can render the bibtex using
 ```
-{% bibliography -f book%}
+{% bibliography -f file_name %}
 ```
-where the file_name is the file name of your .bib file without extension
+where the file_name is the file name of your .bib file without extension. -f stand for file.
 
-## How Jekyll work
+## How Jekyll works
 
 Jekyll seperate the html from the data inside it. Each .md files in the _pages folder has corresponding .yml data file.
 For example, publications page. The html is in _pages/publications.md file. It uses the layout of gridlay(_layouts/gridlay). publications.md fetch data from _data/publist.yml with for loop at line 17
